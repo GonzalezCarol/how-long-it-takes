@@ -1,0 +1,49 @@
+:root {
+  --card-height: 50px;
+  --card-width: 100vw;
+}
+
+body {
+  min-height: 100vh;
+  background: #191c29;
+  display: flex;
+  position: relative;
+  align-items: center;
+  z-index: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.header {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1.5em;
+  
+}
+
+.header::before {
+  content: "";
+  width: 100%;
+  height: 102%;
+  z-index: -1;
+  position: absolute;
+  animation: spin 3s linear infinite alternate;
+}
+
+@keyframes spin {
+  0% {
+    background-color: #5ddcff;
+  }
+  50% {
+    background-color: #4e00c2;
+  }
+  100% {
+    background-color: #f25dff;
+  }
+}
